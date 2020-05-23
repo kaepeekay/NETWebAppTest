@@ -68,14 +68,6 @@ steps:
     codeCoverageTool: Cobertura
     summaryFileLocation: '$(Agent.TempDirectory)\TestResults\Cobertura.xml'
     reportDirectory: '$(Build.SourcesDirectory)/CodeCoverage'
-  
-- task: ResharperCli@2
-  inputs:
-    solutionOrProjectPath: '$(System.DefaultWorkingDirectory)\Casestudy1.sln'
-    failBuildLevelSelector: 'Warning'
-    failBuildOnCodeIssues: false
-    additionalArguments: '/disable-settings-layers:SolutionPersonal --properties:Configuration=$(Build.Configuration)'
-
 
 - task: SonarCloudPublish@1
   inputs:
