@@ -44,11 +44,7 @@ steps:
     temporaryFileCoveragexml: '\TestResults\DynamicCodeCoverage.coveragexml'
     codeCoverageArgs: 'analyze /output:'
     codeCoverageExeFileLocation: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Team Tools\Dynamic Code Coverage Tools\CodeCoverage.exe'
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'VSTest'
-    testResultsFiles: '$(Agent.TempDirectory)\TestResults\*.trx'
 - task: reportgenerator@4
   inputs:
-    reports: 'DynamicCodeCoverage.coveragexml'
+    reports: '\Testresults\DynamicCodeCoverage.coveragexml'
     targetdir: 'coveragereport'
