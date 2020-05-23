@@ -59,6 +59,6 @@ steps:
   
 - task: ResharperCli@2
   inputs:
-    solutionOrProjectPath: '$(solution)'
+    solutionOrProjectPath: '$(System.DefaultWorkingDirectory)'
     failBuildLevelSelector: 'Warning'
     failBuildOnCodeIssues: false
