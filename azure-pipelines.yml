@@ -70,3 +70,9 @@ steps:
     organization: 'kannan-kozhavur-padmanabhan28899'
     scannerMode: 'MSBuild'
     projectKey: 'question'
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
