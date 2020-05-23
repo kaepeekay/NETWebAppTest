@@ -46,5 +46,5 @@ steps:
     codeCoverageExeFileLocation: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Team Tools\Dynamic Code Coverage Tools\CodeCoverage.exe'
 - task: reportgenerator@4
   inputs:
-    reports: '\Testresults\DynamicCodeCoverage.coveragexml'
+    reports: '$(Agent.TempDirectory)\TestResults\DynamicCodeCoverage.coveragexml'
     targetdir: 'coveragereport'
