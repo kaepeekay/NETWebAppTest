@@ -33,7 +33,7 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     codeCoverageEnabled: True
-- task: reportgenerator@4
+- task: PublishTestResults@2
   inputs:
-    reports: '$(Agent.TempDirectory)\TestResults\coverage.xml'
-    targetdir: 'coveragereport'
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/TEST-*.xml'
