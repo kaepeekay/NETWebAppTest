@@ -56,3 +56,9 @@ steps:
     codeCoverageTool: Cobertura
     summaryFileLocation: '$(Agent.TempDirectory)\TestResults\Cobertura.xml'
     reportDirectory: '$(Build.SourcesDirectory)/CodeCoverage'
+  
+- task: ResharperCli@2
+  inputs:
+    solutionOrProjectPath: '$(solution)'
+    failBuildLevelSelector: 'Warning'
+    failBuildOnCodeIssues: false
