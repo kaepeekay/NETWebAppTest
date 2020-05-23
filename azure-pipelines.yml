@@ -62,3 +62,4 @@ steps:
     solutionOrProjectPath: '$(System.DefaultWorkingDirectory)\Casestudy1.sln'
     failBuildLevelSelector: 'Warning'
     failBuildOnCodeIssues: false
+    additionalArguments: '/disable-settings-layers:SolutionPersonal --properties:Configuration=$(Build.Configuration)'
