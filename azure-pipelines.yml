@@ -47,7 +47,7 @@ steps:
 
 - task: reportgenerator@4
   inputs:
-    reports: '\Testresults\DynamicCodeCoverage.coveragexml'
+    reports: '$(Agent.TempDirectory)\TestResults\DynamicCodeCoverage.coveragexml'
     targetdir: 'coveragereport'
     
 - task: PublishTestResults@2
