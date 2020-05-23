@@ -48,3 +48,7 @@ steps:
   inputs:
     testResultsFormat: 'VSTest'
     testResultsFiles: '$(Agent.TempDirectory)\TestResults\*.trx'
+- task: reportgenerator@4
+  inputs:
+    reports: 'DynamicCodeCoverage.coveragexml'
+    targetdir: 'coveragereport'
