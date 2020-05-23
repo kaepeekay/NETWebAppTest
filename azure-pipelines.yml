@@ -35,5 +35,5 @@ steps:
     codeCoverageEnabled: True
 - task: reportgenerator@4
   inputs:
-    reports: 'coverage.xml'
+    reports: '$(Agent.TempDirectory)\TestResults\coverage.xml'
     targetdir: 'coveragereport'
