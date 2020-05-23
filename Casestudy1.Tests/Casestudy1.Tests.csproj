@@ -96,9 +96,6 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Casestudy1\Casestudy1.csproj">
       <Project>{A552439D-BD46-4B97-A52C-380413F63BF9}</Project>
       <Name>Casestudy1</Name>
