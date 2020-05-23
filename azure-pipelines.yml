@@ -54,3 +54,10 @@ steps:
   inputs:
     testResultsFormat: 'VSTest'
     testResultsFiles: '$(Agent.TempDirectory)\TestResults\*.htm'
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish code coverage'
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(Agent.TempDirectory)\TestResults\Cobertura.xml'
+    reportDirectory: '$(Build.SourcesDirectory)/CodeCoverage'
